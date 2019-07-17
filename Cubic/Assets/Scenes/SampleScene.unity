@@ -597,7 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a8829ab034e9041a49f2644d41c92f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoPlayer1: {fileID: 0}
+  videoPlayer1: {fileID: 571841284}
   videoPlayer2: {fileID: 0}
   videoPlayer3: {fileID: 0}
   videoPlayer4: {fileID: 0}
@@ -711,7 +711,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571841283}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 59bef3469775d5f46b07cf037fa022cb, type: 3}
+  m_VideoClip: {fileID: 0}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 519420031}
@@ -721,14 +721,14 @@ VideoPlayer:
   m_TargetMaterialProperty: _MainTex
   m_RenderMode: 0
   m_AspectRatio: 2
-  m_DataSource: 0
+  m_DataSource: 1
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: file://D:/GitHub/Cubic-Video-Project/Cubic/Assets/S1a.mp4
+  m_Url: file://D:/GitHub/Cubic-Video-Project/Cubic/Assets/StreamingAssets/S1a.mp4
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
