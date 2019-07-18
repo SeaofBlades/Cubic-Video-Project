@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
-public class UI_Open : MonoBehaviour
+public class Next_Scene : MonoBehaviour
 {
-    public GameObject UI_Elements;
+    public GameObject Next_Object;
    
     void Start()
     {
@@ -16,7 +16,7 @@ public class UI_Open : MonoBehaviour
     private void EndReached(VideoPlayer vp)
     {
         
-        UI_Elements.SetActive(true);
+        Next_Object.SetActive(true);
         this.gameObject.SetActive(false);
     }
 }

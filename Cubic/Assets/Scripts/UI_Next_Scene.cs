@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Title_Screen_Script : MonoBehaviour
+public class UI_Next_Scene : MonoBehaviour
 {
-    public GameObject first_movie;
+    public GameObject next_movie;
     public void Start_game()
     {
-        first_movie.SetActive(true);
+        next_movie.SetActive(true);
         this.gameObject.SetActive(false);
     }
 }
