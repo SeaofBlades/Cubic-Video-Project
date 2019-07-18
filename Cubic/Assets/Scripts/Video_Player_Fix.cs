@@ -14,6 +14,9 @@ public class Video_Player_Fix : MonoBehaviour
         S2b.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S2b.mp4");
         S2d.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S2d.mp4");
         S3a.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S3a.mp4");
+        S3a_Loop.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S3a-Loop.mp4");
+        S3b.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S3b.mp4");
+        S3a_Loop.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S3b-Loop.mp4");
     }
 
 }
