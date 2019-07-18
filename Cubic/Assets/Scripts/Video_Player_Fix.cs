@@ -9,8 +9,8 @@ public class Video_Player_Fix : MonoBehaviour
     void Start()
     {
         videoPlayer1.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S1a.mp4");
-        /*videoPlayer2.url = System.IO.Path.Combine(Application.streamingAssetsPath, "02_10_Loop.mp4");
-        videoPlayer3.url = System.IO.Path.Combine(Application.streamingAssetsPath, "03_45_Once.mp4");
+        videoPlayer2.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S1b.mp4");
+        /*videoPlayer3.url = System.IO.Path.Combine(Application.streamingAssetsPath, "03_45_Once.mp4");
         videoPlayer4.url = System.IO.Path.Combine(Application.streamingAssetsPath, "04_05_Loop.mp4");
         videoPlayer5.url = System.IO.Path.Combine(Application.streamingAssetsPath, "05_60_Once.mp4");
         videoPlayer6.url = System.IO.Path.Combine(Application.streamingAssetsPath, "06_15_Loop.mp4");*/

@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Title_Screen_Script : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject first_movie;
+    public void Start_game()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        first_movie.SetActive(true);
+        this.gameObject.SetActive(false);
     }
 }
