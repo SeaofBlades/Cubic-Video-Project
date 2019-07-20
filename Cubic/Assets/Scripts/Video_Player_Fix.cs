@@ -5,7 +5,7 @@ using UnityEngine.Video;
 
 public class Video_Player_Fix : MonoBehaviour
 {
-    public VideoPlayer S1a, S1b, S2a, S2b, S2d, S3a, S3a_Loop, S3b, S3b_Loop, S4a, S4b, S4c_Loop, S5a_Loop, S5b, S6a, S7a, S7b, S7c;
+    public VideoPlayer S1a, S1b, S2a, S2b, S2d, S3a, S3a_Loop, S3b, S3b_Loop, S4a_Loop, S4b, S4c_Loop, S5a_Loop, S5b, S6a, S7a, S7b, S7c;
     void Start()
     {
         S1a.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S1a.mp4");
@@ -16,7 +16,12 @@ public class Video_Player_Fix : MonoBehaviour
         S3a.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S3a.mp4");
         S3a_Loop.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S3a-Loop.mp4");
         S3b.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S3b.mp4");
-        S3a_Loop.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S3b-Loop.mp4");
+        S3b_Loop.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S3b-Loop.mp4");
+        S5a_Loop.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S5a-Loop.mp4");
+        S5b.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S5b.mp4");
+        S7a.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S7a.mp4");
+        S7b.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S7b.mp4");
+        S7c.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S7c.mp4");
     }
 
 }
