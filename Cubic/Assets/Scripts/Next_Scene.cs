@@ -7,8 +7,14 @@ public class Next_Scene : MonoBehaviour
 {
     public GameObject Next_Object;
     public Video_Player_Fix Curr_vid;
-   
-    void Start()
+
+    private void Start()
+    {
+        gameObject.GetComponent<VideoPlayer>().loopPointReached += EndReached;
+        Curr_vid.next.Clear();
+        Curr_vid.next.Add(Next_Object);
+    }
+    void OnEnable()
     {
         gameObject.GetComponent<VideoPlayer>().loopPointReached += EndReached;
         Curr_vid.next.Clear();
@@ -18,7 +24,8 @@ public class Next_Scene : MonoBehaviour
 
     private void EndReached(VideoPlayer vp)
     {
-        //Curr_vid.Active_Video = nex
+        Curr_vid.active.Clear();
+        Curr_vid.active.Add(Next_Object);
         Next_Object.SetActive(true);
         this.gameObject.SetActive(false);
     }

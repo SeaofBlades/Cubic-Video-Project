@@ -8,7 +8,13 @@ public class UI_Next_Scene : MonoBehaviour
     public GameObject next_movie;
     public Video_Player_Fix Curr_vid;
 
-    void Start()
+
+    private void Start()
+    {
+        Curr_vid.next.Clear();
+        Curr_vid.next.Add(next_movie);
+    }
+    void OnEnable()
     {
         Curr_vid.next.Clear();
         Curr_vid.next.Add(next_movie);

@@ -73,22 +73,28 @@ public class Video_Player_Fix : MonoBehaviour
         active.Clear();
         active.Add(default_scene);
         default_scene.SetActive(true);
-        pause_button.SetActive(true);
+        pause_button.SetActive(false);
         pause_menu.SetActive(false);
     }
 
     public void Skip_Scene()
     {
+        List<GameObject> Curr_next = new List<GameObject>();
+        for (int i = 0; i < next.Count; i++)
+        {
+            Curr_next.Add(next[i]);
+        }
+        next.Clear();
         for (int i = 0; i < active.Count; i++)
         {
             active[i].SetActive(false);
         }
-        for (int i = 0; i < next.Count; i++)
+        active.Clear();
+        for (int i = 0; i < Curr_next.Count; i++)
         {
-            next[i].SetActive(true);
+            active.Add(Curr_next[i]);
+            Curr_next[i].SetActive(true);
         }
-        active = next;
-        next.Clear();
         pause_button.SetActive(true);
         pause_menu.SetActive(false);
     }
