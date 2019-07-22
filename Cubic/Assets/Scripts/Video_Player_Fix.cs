@@ -6,6 +6,10 @@ using UnityEngine.Video;
 public class Video_Player_Fix : MonoBehaviour
 {
     public VideoPlayer S1a, S1b, S2a, S2b, S2d, S3a, S3a_Loop, S3b, S3b_Loop, S4a_Loop, S4b, S4c_Loop, S5a_Loop, S5b, S6a, S7a, S7b, S7c;
+    [Header("Pause")]
+    public List<GameObject> active, next;
+    public GameObject pause_menu, pause_button, default_scene;
+
     void Start()
     {
         S1a.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S1a.mp4");
@@ -22,6 +26,71 @@ public class Video_Player_Fix : MonoBehaviour
         S7a.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S7a.mp4");
         S7b.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S7b.mp4");
         S7c.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S7c.mp4");
+    }
+
+
+
+    public void Pause_Video()
+    {
+        for (int i = 0; i < active.Count; i++)
+        {
+            if (active[i].GetComponent<VideoPlayer>())
+            {
+                active[i].GetComponent<VideoPlayer>().Pause();
+            }
+            else
+            {
+                active[i].SetActive(false);
+            }
+        }
+        pause_button.SetActive(false);
+        pause_menu.SetActive(true);
+    }
+
+    public void Continue()
+    {
+        for (int i = 0; i < active.Count; i++)
+        {
+            if (active[i].GetComponent<VideoPlayer>())
+            {
+                active[i].GetComponent<VideoPlayer>().Play();
+            }
+            else
+            {
+                active[i].SetActive(true);
+            }
+        }
+        pause_button.SetActive(true);
+        pause_menu.SetActive(false);
+    }
+
+    public void Restart()
+    {
+        for (int i = 0; i < active.Count; i++)
+        {
+            active[i].SetActive(false);
+        }
+        active.Clear();
+        active.Add(default_scene);
+        default_scene.SetActive(true);
+        pause_button.SetActive(true);
+        pause_menu.SetActive(false);
+    }
+
+    public void Skip_Scene()
+    {
+        for (int i = 0; i < active.Count; i++)
+        {
+            active[i].SetActive(false);
+        }
+        for (int i = 0; i < next.Count; i++)
+        {
+            next[i].SetActive(true);
+        }
+        active = next;
+        next.Clear();
+        pause_button.SetActive(true);
+        pause_menu.SetActive(false);
     }
 
 }
