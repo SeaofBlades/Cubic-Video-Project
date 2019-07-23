@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Title_End_Script : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Title_End_Script : MonoBehaviour
     }
     public void Start_game()
     {
+        
         Curr_vid.active.Clear();
         Curr_vid.active.Add(next_movie);
         Pause_Button.SetActive(true);
