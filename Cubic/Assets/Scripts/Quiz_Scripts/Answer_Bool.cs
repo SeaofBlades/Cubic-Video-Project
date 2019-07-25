@@ -28,6 +28,9 @@ public class Answer_Bool : MonoBehaviour
                 Answerbutton2.GetComponent<Image>().color = Color.green;
             }
         }
+        gameObject.GetComponent<Button>().interactable = false;
+        Answerbutton1.GetComponent<Button>().interactable = false;
+        Answerbutton2.GetComponent<Button>().interactable = false;
         Next_button.SetActive(true);
     }
 }

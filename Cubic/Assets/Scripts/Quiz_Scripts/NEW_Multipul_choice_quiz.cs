@@ -14,11 +14,12 @@ public class NEW_Multipul_choice_quiz : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Pause_Button.SetActive(triva_finished);
+        
         Next_Button.SetActive(triva_finished);
         Replay_Button.SetActive(triva_finished);
         if (triva_finished == false && triva_started == false)
         {
+            Pause_Button.SetActive(false);
             triva_started = true;
             Triva_Go();
         }
@@ -40,9 +41,19 @@ public class NEW_Multipul_choice_quiz : MonoBehaviour
         }
         Quiz_List[0].SetActive(true);
     }
+    public void next_scene()
+    {
+        score = 0;
+        Final_Score.SetText("");
+        triva_finished = false;
+        triva_started = false;
+        Pause_Button.SetActive(true);
+        gameObject.GetComponent<UI_Next_Scene>().Start_game();
+    }
     public void Replay()
     {
         score = 0;
+        Final_Score.SetText("");
         triva_finished = false;
         triva_started = false;
     }
@@ -51,6 +62,9 @@ public class NEW_Multipul_choice_quiz : MonoBehaviour
         Quiz_List[0].GetComponent<Button_Tracker>().answer1.GetComponent<Image>().color = Color.white;
         Quiz_List[0].GetComponent<Button_Tracker>().answer2.GetComponent<Image>().color = Color.white;
         Quiz_List[0].GetComponent<Button_Tracker>().answer3.GetComponent<Image>().color = Color.white;
+        Quiz_List[0].GetComponent<Button_Tracker>().answer1.GetComponent<Button>().interactable = true;
+        Quiz_List[0].GetComponent<Button_Tracker>().answer2.GetComponent<Button>().interactable = true;
+        Quiz_List[0].GetComponent<Button_Tracker>().answer3.GetComponent<Button>().interactable = true;
         Quiz_List[0].GetComponent<Button_Tracker>().next.SetActive(false);
         Quiz_List[0].SetActive(false);
         Question_List.Add(Quiz_List[0]);

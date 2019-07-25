@@ -5,7 +5,7 @@ using UnityEngine.Video;
 
 public class Video_Player_Fix : MonoBehaviour
 {
-    public VideoPlayer S1a, S1b, S2a, S2b, S2d, S3a, S3a_Loop, S3b, S3b_Loop, S4a_Loop, S4b, S4c_Loop, S5a_Loop, S5b, S6a, S7a, S7b, S7c;
+    public VideoPlayer S1a, S1b, S2a, S2b, S2d, S3a, S3a_Loop, S3b, S3b_Loop, S4a, S4a_Loop, S4a_UI_Content, S4b_Loop, S5a_Loop, S5b, S6a, S6a_UI_Content, S7a, S7b, S7c;
     [Header("Pause")]
     public List<GameObject> active, next;
     public GameObject pause_menu, pause_button, default_scene;
@@ -21,8 +21,14 @@ public class Video_Player_Fix : MonoBehaviour
         S3a_Loop.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S3a-Loop.mp4");
         S3b.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S3b.mp4");
         S3b_Loop.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S3b-Loop.mp4");
+        S4a.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S4a.mp4");
+        S4a_Loop.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S4a-Loop.mp4");
+        S4a_UI_Content.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S4a-UI-Content-ShaoXing Lu Xun.mp4");
+        S4b_Loop.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S4b-Loop.mp4");
         S5a_Loop.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S5a-Loop.mp4");
         S5b.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S5b.mp4");
+        S6a.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S6a.mp4");
+        S6a_UI_Content.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S6a-UI-Content-Liui Yang Tansi Tong.mp4");
         S7a.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S7a.mp4");
         S7b.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S7b.mp4");
         S7c.url = System.IO.Path.Combine(Application.streamingAssetsPath, "S7c.mp4");
