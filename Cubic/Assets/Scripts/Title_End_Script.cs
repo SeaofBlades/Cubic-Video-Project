@@ -11,9 +11,12 @@ public class Title_End_Script : MonoBehaviour
 
     void Start()
     {
-        Pause_Button.SetActive(false);
         Curr_vid.next.Clear();
         Curr_vid.next.Add(next_movie);
+    }
+    private void FixedUpdate()
+    {
+        Pause_Button.SetActive(false);
     }
     public void Start_game()
     {
